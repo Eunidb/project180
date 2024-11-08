@@ -65,7 +65,8 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/picMain" />
+                    app:layout_constraintTop_toBottomOf="@+id/picMain"
+                    app:layout_constraintVertical_bias="1.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
@@ -79,7 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="title"
+                    android:text="Nombre del producto"
                     android:textStyle="bold"
                     android:textSize="22sp"
                     android:textColor="@color/black"/>
@@ -101,37 +102,6 @@
                 android:orientation="horizontal"
                 android:padding="16dp">
 
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/picSeller"
-                    android:layout_width="60dp"
-                    app:shapeAppearanceOverlay="@style/CircleImageView"
-                    android:layout_height="60dp"
-                    app:srcCompat="@drawable/profile" />
-
-                <TextView
-                    android:id="@+id/SellerNameTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_weight="1"
-                    android:text="Seller"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/msgToSellerBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    app:srcCompat="@drawable/message" />
-
-                <ImageView
-                    android:id="@+id/calToSellerBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/call" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -146,7 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Select Size"
+                    android:text="Seleccione el tamaño"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:textColor="@color/black"/>
@@ -181,7 +151,7 @@
                 android:layout_margin="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Descripcion" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -197,7 +167,7 @@
                    android:layout_margin="8dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Add to Cart"
+                    android:text="Añadir al carrito"
                     android:textColor="@color/white"
                     android:textSize="18sp"/>
 
@@ -207,6 +177,7 @@
                   android:layout_margin="8dp"
                     android:layout_height="50dp"
                    android:background="@drawable/grey_cirle_bg"
+                    android:contentDescription="TODO"
                     android:elevation="2dp"
                     app:srcCompat="@drawable/basket" />
             </LinearLayout>
