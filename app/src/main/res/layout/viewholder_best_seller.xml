@@ -21,10 +21,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:tint="@color/grey"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/btn_3" />
+        app:srcCompat="@drawable/btn_3"
+        app:tint="@color/grey" />
 
     <TextView
         android:id="@+id/priceTxt"

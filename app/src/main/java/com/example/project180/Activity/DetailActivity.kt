@@ -62,7 +62,6 @@ class DetailActivity : BaseActivity() {
         binding.descriptionTxt.text = item.description
         binding.priceTxt.text = "$" + item.price
         binding.ratingTxt.text = "${item.rating} "
-        binding.SellerNameTxt.text = item.sellerName
 
         binding.AddToCartBtn.setOnClickListener {
             item.numberInCart = numberOrder
@@ -72,24 +71,6 @@ class DetailActivity : BaseActivity() {
         binding.backBtn.setOnClickListener { startActivity(Intent(this,MainActivity::class.java)) }
         binding.CartBtn.setOnClickListener {
             startActivity(Intent(this@DetailActivity, CartActivity::class.java))
-        }
-
-        Glide.with(this)
-            .load(item.sellerPic)
-            .apply(RequestOptions().transform(CenterCrop()))
-            .into(binding.picSeller)
-
-        binding.msgToSellerBtn.setOnClickListener {
-            val sendIntent = Intent(Intent.ACTION_VIEW)
-            sendIntent.setData(Uri.parse("sms:" + item.sellerTell))
-            sendIntent.putExtra("sms_body", "type your message");
-            startActivity(sendIntent)
-        }
-
-        binding.calToSellerBtn.setOnClickListener {
-            val phone = item.sellerTell.toString()
-            val intent = Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null))
-            startActivity(intent)
         }
     }
 }

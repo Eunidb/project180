@@ -28,7 +28,6 @@ class MainActivity : BaseActivity() {
 
         initBanners()
         initCategories()
-        initBestSeller()
         bottomNavigation()
 
     }
@@ -37,15 +36,6 @@ class MainActivity : BaseActivity() {
         binding.cartBtn.setOnClickListener { startActivity(Intent(this,CartActivity::class.java)) }
     }
 
-    private fun initBestSeller() {
-      binding.progressBarBestSeller.visibility=View.VISIBLE
-        viewModel.bestSeller.observe(this, Observer {
-            binding.viewBestSeller.layoutManager=GridLayoutManager(this,2)
-            binding.viewBestSeller.adapter=BestSellerAdapter(it)
-            binding.progressBarBestSeller.visibility=View.GONE
-        })
-        viewModel.loadBestSeller()
-    }
 
     private fun initCategories() {
         binding.progressBarCategory.visibility = View.VISIBLE
